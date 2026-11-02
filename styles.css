@@ -20,10 +20,24 @@ body {
     color: var(--text);
 }
 
+/* Header */
+header {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 90px 20px 25px;
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 15px 0;
+}
+
 /* Navigation Bar */
 nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background-color: var(--primary);
     padding: 18px;
@@ -31,10 +45,17 @@ nav {
     z-index: 1000;
 }
 
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
 nav a {
     color: white;
     text-decoration: none;
-    margin: 15px;
     font-weight: bold;
 }
 
@@ -42,13 +63,9 @@ nav a:hover {
     color: var(--accent);
 }
 
-/* Header */
-header {
-    background-color: var(--primary);
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 55px;
+/* Main Content */
+main {
+    width: 100%;
 }
 
 /* Hero Section */
@@ -57,6 +74,7 @@ section#hero {
     color: white;
     text-align: center;
     padding: 100px 20px;
+    margin: 25px;
 }
 
 section#hero img {
@@ -65,41 +83,47 @@ section#hero img {
 }
 
 section#hero p {
-    font-size: 18px;
+    font-size: 24px;
     margin: 25px 0;
 }
 
 section#hero button {
     background-color: var(--accent);
     color: var(--primary);
-    padding: 12px 25px;
+    padding: 15px 30px;
     margin: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 7px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 16px;
 }
 
 section#hero button:hover {
     background-color: white;
 }
 
-/* Sections */
+/* General Sections */
 section {
     padding: 30px;
     margin: 20px;
 }
 
-/* Cards */
-section:nth-of-type(2) {
+/* About IPL Section */
+main > section:nth-of-type(2) {
     background-color: white;
-    padding: 25px;
-    margin: 20px;
+    padding: 30px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Tables */
+main > section:nth-of-type(2) h2,
+main > section:nth-of-type(2) h3 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* Match Schedule Section */
 table {
     width: 90%;
     margin: 30px auto;
@@ -119,7 +143,7 @@ th {
     color: white;
 }
 
-/* Forms */
+/* Booking Form */
 form {
     width: 80%;
     max-width: 500px;
@@ -131,12 +155,21 @@ form {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+form label {
+    display: inline-block;
+    margin: 8px 0;
+}
+
 input, select {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+}
+
+input[type="radio"] {
+    width: auto;
 }
 
 input[type="submit"], button {
@@ -146,6 +179,19 @@ input[type="submit"], button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+}
+
+/* Guidelines Section */
+body > section {
+    background-color: white;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+body > section h2 {
+    margin: 15px 0;
 }
 
 /* Footer */
